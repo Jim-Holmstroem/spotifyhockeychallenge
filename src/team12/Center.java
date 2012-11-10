@@ -5,7 +5,7 @@ public class Center extends BasePlayer {
     public int getNumber() { return 19; }
 
     // Name of center player
-    public String getName() { return "Center"; }
+    public String getName() { return "Michael Cow"; }
 
     // Center player's intelligence
     public void step() {

@@ -10,13 +10,13 @@ public class Team implements ITeam {
     public String getShortName() { return "___"; }
 
     // Team Name
-    public String getTeamName() { return "Team Template"; }
+    public String getTeamName() { return "Neil Armsloth"; }
 
     // Team color; body color
-    public Color getTeamColor() { return Color.MAGENTA; }
+    public Color getTeamColor() { return Color.RED; }
 
     // Team color; helmet color.
-    public Color getSecondaryTeamColor() { return Color.ORANGE; }
+    public Color getSecondaryTeamColor() { return Color.BLUE; }
 
     // The team's LUCKY NUMBER!!
     public int getLuckyNumber() { return 0; }
@@ -27,10 +27,10 @@ public class Team implements ITeam {
     // Get the other five players of the team.
     public Player getPlayer(int index) {
 	switch (index) {
-	case 1: return new Defender(); // Left defender
-	case 2: return new Defender(); // Right defender
-	case 3: return new Forward(); // Left forward
-	case 4: return new Forward(); // Right forward
+	case 1: return new Defender(0); // Left defender
+	case 2: return new Defender(1); // Right defender
+	case 3: return new Forward(0); // Left forward
+	case 4: return new Forward(1); // Right forward
 	case 5: return new Center(); // Center
 	}
 	return null;

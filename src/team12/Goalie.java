@@ -11,7 +11,7 @@ public class Goalie extends GoalKeeper {
     public int getNumber() { return 1; }
 
     // Name of the goalie.
-    public String getName() { return "The Goalie"; }
+    public String getName() { return "Alan Sheep"; }
 
     // Left handed goalie
     public boolean isLeftHanded() { return true; }

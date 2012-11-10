@@ -1,11 +1,18 @@
 package team12;
 
 public class Defender extends BasePlayer {
+	private int m_index;
+	private static String[] s_names = { "Christer Fruit Fly", "Alan Bear" };
+	
+	public Defender(int index) {
+		m_index = index;
+	}
+	
     // Number of defender
     public int getNumber() { return 10; }
 
     // Name of defender
-    public String getName() { return "Defender"; }
+    public String getName() { return s_names[m_index]; }
 
     // Make left defender left handed, right defender right handed.
     public boolean isLeftHanded() { return getIndex() == 1; }
