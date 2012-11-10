@@ -1,4 +1,4 @@
-spotifyhockeychallange
+spotifyhockeychallenge
 ======================
 
 Spotify Hockey Challange
