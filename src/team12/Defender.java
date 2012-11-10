@@ -19,17 +19,21 @@ public class Defender extends BasePlayer {
 
     // Initiate
     public void init() {
+    	super.init();
+    	
 	setAimOnStick(false);
     }
 
     // Defender intelligence
     public void step() {
-	if (getPuck().isHeld())
+    	super.step();
+    	
+	/*if (getPuck().isHeld())
 	    skate(getPuck().getHolder(), MAX_SPEED);
 	else
 	    if (getIndex() == 1)
 		skate(-20000, -10000, 1000);
 	    else
-		skate(-20000, 10000, 1000);
+		skate(-20000, 10000, 1000);*/
     }
 }

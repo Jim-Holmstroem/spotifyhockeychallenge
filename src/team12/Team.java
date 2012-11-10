@@ -7,7 +7,7 @@ import hockey.api.ITeam;
 
 public class Team implements ITeam {
     // Team Short Name.  Max 4 characters.
-    public String getShortName() { return "___"; }
+    public String getShortName() { return "Sloth"; }
 
     // Team Name
     public String getTeamName() { return "Neil Armsloth"; }
@@ -19,20 +19,26 @@ public class Team implements ITeam {
     public Color getSecondaryTeamColor() { return Color.BLUE; }
 
     // The team's LUCKY NUMBER!!
-    public int getLuckyNumber() { return 0; }
+    public int getLuckyNumber() { return 1337; }
 
     // Get the goal keeper of the team.
     public GoalKeeper getGoalKeeper() { return new Goalie(); }
 
     // Get the other five players of the team.
+    
+    public static BasePlayer[] s_players = { new Defender(0), new Defender(1), new Forward(0), new Forward(1), new Center() };
+    
     public Player getPlayer(int index) {
-	switch (index) {
+	/*switch (index) {
 	case 1: return new Defender(0); // Left defender
 	case 2: return new Defender(1); // Right defender
 	case 3: return new Forward(0); // Left forward
 	case 4: return new Forward(1); // Right forward
 	case 5: return new Center(); // Center
-	}
-	return null;
+	}*/    		
+    	
+    	if (index >= 1 && index <= 5)
+    		return s_players[index - 1];
+    	return null;
     }
 }
